@@ -21,7 +21,7 @@ class RecipePost(models.Model):
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)    
     status = models.IntegerField(choices=STATUS, default=0)
     hearts = models.ManyToManyField(
-        User, related_name='blogpost_heart', blank=True)
+        User, related_name='blogpost_hearts', blank=True)
 
     def read_time(self):
       result = readtime.of_text(self.content)

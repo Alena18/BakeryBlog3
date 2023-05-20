@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic import ListView, DetailView
 from .models import RecipePost
@@ -31,7 +31,7 @@ class BlogDetail(View):
             },
         )
 
-    def blog(self, request, slug, *args, **kwargs):
+    def post(self, request, slug, *args, **kwargs):
         queryset = RecipePost.objects.filter(status=1)
         blog = get_object_or_404(queryset, slug=slug)
         comments = blog.comments.filter(approved=True).order_by("-created_on")
@@ -67,8 +67,8 @@ class BlogDetail(View):
 
 class BlogHeart(View):
     
-    def blog(self, request, slug, *args, **kwargs):
-        blog = get_object_or_404(queryset, slug=slug)
+    def post(self, request, slug):
+        blog = get_object_or_404(RecipePost, slug=slug)
         if blog.hearts.filter(id=request.user.id).exists():
             blog.hearts.remove(request.user)
         else:
