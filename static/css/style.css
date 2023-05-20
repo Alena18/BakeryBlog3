@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik:ital,wght@0,300;0,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+/* Base */
+header {
+    font-family: Sigmar, sans-serif;
+    
+}
+
+#logo {
+    width: 10%;
+    margin: 2% 0 0 1%;
+
+}
+
+body {
+    background-color: rgb(250, 250, 241);
+    font-family: Rubik, sans-serif;
+    font-size: 150%;
+    color: #520808;
+
+}
+
+a {
+    color: #520808;
+}
+
+#menu {
+    letter-spacing: .1vw;
+    line-height: 150px;
+    text-align: center;
+}
+
+.connect {
+    font-family: Sigmar, sans-serif;
+    line-height: 30px;
+}
+
+/* forms */
+
+.signup-form {
+    font-family: 'Permanent Marker', sans-serif;
+    font-size: 200%;
+}
+
+.signup-form h2 {
+    font-family: 'Permanent Marker', sans-serif;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    line-height: 120px;
+}
+
+.form {
+    font-family: Rubik, sans-serif;
+    margin-left: 2%;
+    margin-bottom: 3rem;
+    font-size: 80%;
+
+}
+
+.form h1 {
+    font-family: 'Permanent Marker', sans-serif;
+    font-size: 200%;
+    margin-bottom: 2rem;
+    }
+
+.p-form {
+    margin-bottom: 4rem;
+}
+
+#out{
+   text-align: center;
+}
+
+
+#terms {
+    margin-bottom: 2rem;
+}
+
+p {
+    margin-bottom: 2rem;
+}
+.input-text {
+    background-color: rgb(250, 250, 250);
+    background: transparent;
+    width: 18vw;
+    height: 25px;
+    border: 1px solid #520808;
+    border-radius: 2px;
+}
+
+.feedback {
+    height: 20vh;
+    width: 30vw;
+    margin-bottom: 2rem;
+}
+
+.button-submit {
+    font-family: Rubik, sans-serif;
+    background-color: #520808;
+    border: 1px solid rgb(250, 250, 250);
+    border-radius: 25% 0%;
+    padding: 8px;
+    color: rgb(250, 250, 241);
+    text-align: center;
+    text-decoration: none;
+}
+
+.confirm-text {
+    font-family: 'Permanent Marker', sans-serif;
+    text-align: center;
+    font-size: 150%;
+}
+
+
+#welcome-picture {
+    width: 80%;
+    border: 10px solid #520808;
+    border-radius: 4px;
+}
+
+#welcome-text {
+    padding-top: 5%;
+    text-align: center;
+    font-family: 'Permanent Marker', sans-serif;
+    line-height: 300%;
+}
+
+#insta {
+    font-family: Rubik, sans-serif;
+    font-size: 80%;
+    margin-left: 75%;
+}
+
+#icon-insta {
+    font-size: 180%;
+    padding-left: 1%;
+}
