@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static %} 
+{% load static %}
 {% block content %}
 {% load crispy_forms_tags %}
 <div class="masthead">
@@ -14,7 +14,8 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in blog.featured_image.url %}
-                <img src="https://res.cloudinary.com/dmie5ezad/image/upload/v1684103082/static/images/logo.f3c1c788a906.png" width="100%">
+                <img src="https://res.cloudinary.com/dmie5ezad/image/upload/v1684103082/static/images/logo.f3c1c788a906.png"
+                    width="100%">
                 {% else %}
                 <img src="{{ blog.featured_image.url }}" width="100%">
                 {% endif %}
@@ -32,7 +33,29 @@
                 <p class="card-text ">
                     {{ blog.content | safe }}
                 </p>
-                <div class="col-1">
+                <div class="row">
+
+                    <div class="col-1">
+                        <strong>
+                            {% if user.is_authenticated %}
+                            <form class="d-inline" action="{% url 'blog_hearts' blog.slug %}" method="POST">
+                                {% csrf_token %}
+                                {% if liked %}
+                                <button type="submit" name="blogpost_id" value="{{blog.slug}}" class="btn-like"><i
+                                        class="fas fa-heart"></i></button>
+                                {% else %}
+                                <button type="submit" name="blogpost_id" value="{{blog.slug}}" class="btn-like"><i
+                                        class="far fa-heart"></i></button>
+                                {% endif %}
+                            </form>
+                            {% else %}
+                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            {% endif %}
+                            <!-- The number of likes goes before the closing strong tag -->
+                            <span class="text-secondary">{{ blog.number_of_hearts }} </span>
+                        </strong>
+                    </div>
+                    <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
                             <!-- Our total_comments variable goes before the closing strong tag -->
@@ -90,25 +113,6 @@
                 {% endif %}
                 {% endif %}
             </div>
-        </div>
-
-        <div class="col-1">
-            <strong>
-                {% if user.is_authenticated %}
-                <form class="d-inline" action="{% url 'blog_hearts' blog.slug %}" method="POST">
-                    {% csrf_token %}
-                    {% if liked %}
-                    <button type="submit" name="blogpost_id" value="{{blog.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
-                    {% else %}
-                    <button type="submit" name="blogpost_id" value="{{blog.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
-                    {% endif %}
-                </form>
-                {% else %}
-                <span class="text-secondary"><i class="far fa-heart"></i></span>
-                {% endif %}
-            <!-- The number of likes goes before the closing strong tag -->
-            <span class="text-secondary">{{ blog.number_of_hearts }} </span>
-            </strong>
         </div>
     </div>
 </div>
