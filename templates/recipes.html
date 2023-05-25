@@ -15,7 +15,8 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in blog.featured_image.url %}
-                                <img class="card-img-top" src="https://res.cloudinary.com/dmie5ezad/image/upload/v1684103082/static/images/logo.f3c1c788a906.png">
+                                <img class="card-img-top"
+                                    src="https://res.cloudinary.com/dmie5ezad/image/upload/v1684103082/static/images/logo.f3c1c788a906.png">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ blog.featured_image.url }}">
                                 {% endif %}
@@ -29,9 +30,12 @@
                                 <h3 class="card-text">{{ blog.created_on }}</h3>
                                 <h3 class="card-text">Reading time: {{ blog.read_time }}</h3>
                             </a>
+                            <h3 class="card-text text-end"><i class="fas fa-heart"></i>
+                                {{ blog.number_of_hearts }}</h3>
                         </div>
                     </div>
                 </div>
+
                 {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
@@ -42,8 +46,7 @@
         </div>
     </div>
 
-    <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-        {{ post.number_of_likes }}</p>
+
 
 
     {% if is_paginated %}
