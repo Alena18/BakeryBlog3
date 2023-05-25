@@ -3,7 +3,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-
 STATUS = ((0,"Draft"), (1, "Published"))
 
 class RecipePost(models.Model):
@@ -22,6 +21,12 @@ class RecipePost(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     hearts = models.ManyToManyField(
         User, related_name='blogpost_hearts', blank=True)
+
+    def average_rating(self) -> float:
+        return Rating.objects.filter(blog=self).aggregate(Avg("rating"))["rating__avg"] or 0
+
+    def __str__(self):
+        return f"{self.header}: {self.average_rating()}"
 
     def read_time(self):
       result = readtime.of_text(self.content)
@@ -51,5 +56,3 @@ class UserComment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
-
-        

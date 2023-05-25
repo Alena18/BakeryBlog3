@@ -4,7 +4,7 @@
 /* Base */
 header {
     font-family: Sigmar, sans-serif;
-    
+
 }
 
 #logo {
@@ -63,14 +63,14 @@ a {
     font-family: 'Permanent Marker', sans-serif;
     font-size: 200%;
     margin-bottom: 2rem;
-    }
+}
 
 .p-form {
     margin-bottom: 4rem;
 }
 
-#out{
-   text-align: center;
+#out {
+    text-align: center;
 }
 
 
@@ -81,6 +81,7 @@ a {
 p {
     margin-bottom: 2rem;
 }
+
 .input-text {
     background-color: rgb(250, 250, 250);
     background: transparent;
@@ -137,3 +138,4 @@ p {
     font-size: 180%;
     padding-left: 1%;
 }
+

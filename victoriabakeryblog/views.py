@@ -18,7 +18,9 @@ class BlogDetail(View):
         queryset = RecipePost.objects.filter(status=1)
         blog = get_object_or_404(queryset, slug=slug)
         comments = blog.comments.filter(approved=True).order_by("-created_on")
- 
+        liked = False
+        if blog.hearts.filter(id=self.request.user.id).exists():
+            liked = True 
 
         return render(
             request,
@@ -26,6 +28,7 @@ class BlogDetail(View):
             {
                 "blog": blog,
                 "comments": comments,
+                "liked": liked,
                 "commented": False,
                 "comment_form": UserCommentForm()
             },
@@ -35,7 +38,9 @@ class BlogDetail(View):
         queryset = RecipePost.objects.filter(status=1)
         blog = get_object_or_404(queryset, slug=slug)
         comments = blog.comments.filter(approved=True).order_by("-created_on")
-            
+        liked = False
+        if blog.hearts.filter(id=self.request.user.id).exists():
+            liked = True     
         comment_form = UserCommentForm(data=request.POST)
 
         if comment_form.is_valid():
@@ -53,6 +58,7 @@ class BlogDetail(View):
             {
                 "blog": blog,
                 "comments": comments,
+                "liked": liked,
                 "commented": True,
                 "comment_form": UserCommentForm()
             },
