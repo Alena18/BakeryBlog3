@@ -22,12 +22,6 @@ class RecipePost(models.Model):
     hearts = models.ManyToManyField(
         User, related_name='blogpost_hearts', blank=True)
 
-    def average_rating(self) -> float:
-        return Rating.objects.filter(blog=self).aggregate(Avg("rating"))["rating__avg"] or 0
-
-    def __str__(self):
-        return f"{self.header}: {self.average_rating()}"
-
     def read_time(self):
       result = readtime.of_text(self.content)
       return result.text

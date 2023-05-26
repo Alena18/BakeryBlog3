@@ -31,7 +31,7 @@ DEBUG = os.environ.get("DEBUG", True)
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['localhost',
-'8000-alena18-bakeryblog3-k932vgnrn0.us2.codeanyapp.com',
+ '8000-alena18-bakeryblog3-14tkca7knz.us2.codeanyapp.com',
 ]
 
 
