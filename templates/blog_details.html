@@ -85,11 +85,12 @@
                     </p>
     
                     {{ comment.body | linebreaks }}
-    
+                    {% if user.is_authenticated %}
                     <form method="POST" action="{% url 'delete_comment' comment.id %}">
                         {% csrf_token %}
                         <button type="submit" class="btn btn-danger">Delete</button>
                     </form>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>
