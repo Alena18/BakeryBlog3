@@ -1,9 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic import ListView, DetailView
-from .models import RecipePost
+from .models import RecipePost, UserComment
 from django.http import HttpResponse, HttpResponseRedirect
 from .forms import UserCommentForm
+from django.contrib import messages
 
 class BlogPost(generic.ListView):
 
@@ -110,3 +111,11 @@ def profile (request):
         username = request.user.username
         return render(request, "profile.html", {'username': username},)
 
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(UserComment, id=comment_id)
+
+    # Check if the user is the author of the comment
+    if request.user == comment.author:
+        comment.delete()
+
+    return redirect('blog_details', slug=comment.blog.slug)

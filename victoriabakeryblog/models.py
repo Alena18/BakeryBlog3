@@ -22,6 +22,7 @@ class RecipePost(models.Model):
     hearts = models.ManyToManyField(
         User, related_name='blogpost_hearts', blank=True)
 
+
     def read_time(self):
       result = readtime.of_text(self.content)
       return result.text
