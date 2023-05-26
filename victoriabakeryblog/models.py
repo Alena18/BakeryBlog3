@@ -45,6 +45,8 @@ class UserComment(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
+    author = models.ForeignKey(User, on_delete=models.CASCADE,
+            related_name="comments", null=True)
 
     class Meta:
         ordering = ["created_on"]
