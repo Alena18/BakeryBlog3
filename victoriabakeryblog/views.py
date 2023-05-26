@@ -105,3 +105,8 @@ def askconfirm (request):
 
 def blog_details (request):
     return render(request, 'blog_details.html')
+
+def profile (request):
+        username = request.user.username
+        return render(request, "profile.html", {'username': username},)
+

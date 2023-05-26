@@ -15,10 +15,22 @@
 <body>
     <!-- Navigation -->
     <header>
+        {% if user.is_authenticated %}
+        <div class="row">
+        <div class="col-4">
+            <a href="index.html"><img src="{% static 'images/logo.png' %}" alt="VictoriaBakeryBlog logo home page"
+            id="logosigned"></a>
+        </div>
+        <div class="col-8 welcometext">
+            Welcome to my blog !
+        </div>
+        </div>
+        {% else %}
         <div class="col-sm">
             <a href="index.html"><img src="{% static 'images/logo.png' %}" alt="VictoriaBakeryBlog logo home page"
             id="logo"></a>
         </div>
+        {% endif %}
         <div class="container" id="menu">
             <div class="row">
               <div class="col-sm">
@@ -32,7 +44,7 @@
               </div>
               {% if user.is_authenticated %}
               <div class="col-sm sign_up">
-                <a href="{% url 'sign_up' %}">Sign-up/Log out</a>
+                <a href="{% url 'profile' %}">Sign-up/Log out</a>
               </div>
               {% else %}
               <div class="col-sm sign_up">

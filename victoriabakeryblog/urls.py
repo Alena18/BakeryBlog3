@@ -15,4 +15,6 @@ urlpatterns = [
     path('askconfirm.html', views.askconfirm, name='askconfirm'),
     path('blog_details.html', views.blog_details, name='blog_details'),
     path('like/<slug:slug>', views.BlogHeart.as_view(), name='blog_hearts'),
+    path('profile.html', views.profile, name='profile'),
+
 ]
