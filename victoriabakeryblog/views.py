@@ -113,6 +113,6 @@ def profile (request):
         return render(request, "profile.html", {'username': username},)
 
 def delete_comment(request, id):
-    comment = UserComment.objects.get(id=id)
+    comment = get_object_or_404(UserComment, id=id)
     comment.delete()
-    return redirect('blog_details.html')
+    return redirect('blog_details', slug=comment.blog.slug)
