@@ -46,7 +46,6 @@ class BlogDetail(View):
         comment_form = UserCommentForm(data=request.POST)
 
         if comment_form.is_valid():
-            comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
             comment.blog = blog
@@ -109,3 +108,4 @@ def delete_comment(request, id):
     comment = get_object_or_404(UserComment, id=id)
     comment.delete()
     return redirect('blog_details', slug=comment.blog.slug)
+
