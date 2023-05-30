@@ -31,6 +31,7 @@
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">
+                    {{ blog.ingredients | safe }}
                     {{ blog.content | safe }}
                 </p>
                 <div class="row">
