@@ -1,6 +1,6 @@
 from . import views
 from django.urls import path, include
-from .views import BlogPost, BlogDetail, BlogHeart
+from .views import BlogPost, BlogDetail, BlogHeart, TipPost, TipDetail
 from django.conf.urls import url
 
 urlpatterns = [
@@ -8,6 +8,8 @@ urlpatterns = [
     path('index.html', views.index, name='index'),
     path('<slug:slug>/', views.BlogDetail.as_view(), name='blog_details'),    
     path('recipes.html', views.BlogPost.as_view(), name='recipes'),
+    path('tips/<slug:slug>', views.TipDetail.as_view(), name='tip_details'),    
+    path('tips.html', views.TipPost.as_view(), name='tips'),
     path('sign_up.html', views.sign_up, name='sign_up'),
     path('sign_upconfirm.html', views.confirm, name='confirm'),
     path('connect.html', views.connect, name='connect'),
