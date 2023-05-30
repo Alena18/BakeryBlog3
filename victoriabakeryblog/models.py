@@ -72,7 +72,7 @@ class Tips(models.Model):
         return self.title
 
 class TipComments(models.Model):
-    post = models.ForeignKey(RecipePost, on_delete=models.CASCADE,
+    post = models.ForeignKey(Tips, on_delete=models.CASCADE,
                              related_name="tcomments")
     name = models.CharField(max_length=80)
     body = models.TextField()

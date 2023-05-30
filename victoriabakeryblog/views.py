@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.views.generic import ListView, DetailView
 from .models import RecipePost, UserComment, Tips, TipComments
 from django.http import HttpResponse, HttpResponseRedirect
-from .forms import UserCommentForm
+from .forms import UserCommentForm, TipCommentForm
 from django.contrib import messages
 
 

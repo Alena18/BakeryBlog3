@@ -18,12 +18,12 @@
                             </div>
                             <a href="{% url 'tip_details' post.slug  %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
-                                <h3 class="card-text">{{ post.created_on }}</h3>
+                               <p><h3 class="card-text">{{ post.created_on }}</h3></p>
                             </a>
-                            {% with post.tcomments.count as total_comments %}
+                            {% with post.tcomments.count as total_tcomments %}
                             <strong class="text-secondary"><i class="far fa-comments"></i>
                                 <!-- Our total_comments variable goes before the closing strong tag -->
-                                {{ total_comments }}</strong>
+                                {{ total_tcomments }}</strong>
                             {% endwith %}
                         </div>
                     </div>

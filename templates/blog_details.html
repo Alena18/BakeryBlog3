@@ -77,7 +77,7 @@
             <div class="card-body">
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
+                    <p class="fw-bold">
                         {{ comment.name }}
                         <span class="text-muted font-weight-normal">
                             {{ comment.created_on }}
@@ -85,7 +85,7 @@
                     </p>
     
                     {{ comment.body | linebreaks }}
-                    {% if user.is_authenticated %}
+                    {% if user.is_authenticated and user == comment.author %}
                     <form method="POST" action="{% url 'delete_comment' comment.id %}">
                         {% csrf_token %}
                         <button type="submit" class="btn btn-danger">Delete</button>
@@ -96,7 +96,7 @@
             </div>
         </div>
     </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
+        <div class="col-md-8 card mb-4  mt-3 ">
             <div class="card-body">
                 <!-- For later -->
                 {% if commented %}
