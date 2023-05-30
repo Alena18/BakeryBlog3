@@ -66,13 +66,6 @@ class BlogDetail(View):
             },
         )
         
-    def blog_details(request, id):
-       blog_details = get_object_or_404(Post, id=id)
-       context = {
-          'blog_details': blog_details,
-           }
-       return render(request, 'blog_details.html', context)
-
 class BlogHeart(View):
     
     def post(self, request, slug):

@@ -26,9 +26,8 @@
                             </div>
                             <a href="{% url 'blog_details' blog.slug  %}" class="post-link">
                                 <h2 class="card-title">{{ blog.title }}</h2>
-                                <h3 class="card-text" max>{{ blog.content }}</h3>
                                 <h3 class="card-text">{{ blog.created_on }}</h3>
-                                <h3 class="card-text">Reading time: {{ blog.read_time }}</h3>
+                                <h5 class="card-text">Reading time: {{ blog.read_time }}</h5>
                             </a>
                             <h3 class="card-text text-end"><i class="fas fa-heart"></i>
                                 {{ blog.number_of_hearts }}</h3>
