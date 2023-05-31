@@ -9,27 +9,15 @@
             first.</p>
         </h2>
         {% if user.is_authenticated %}
-        <div class="container" id="menu">
-            <div class="row">
-                <div class="col-sm">
-                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                </div>
-            </div>
+        <div class="col-sm text-center" id="sign-up-word">
+            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
         </div>
         {% else %}
-        <div class="container" id="menu">
-            <div class="row">
-                <div class="col-sm">
-                    <a class="nav-link" href="{% url 'account_signup' %}">Sign-up</a>
-                </div>
-            </div>
+        <div class="col-sm text-center" id="sign-up-word">
+            <a class="nav-link" href="{% url 'account_signup' %}">Sign-up</a>
         </div>
-        <div class="container" id="menu">
-            <div class="row">
-                <div class="col-sm">
-                    <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                </div>
-            </div>
+        <div class="col-sm text-center" id="sign-up-word">
+            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
         </div>
         {% endif %}
 

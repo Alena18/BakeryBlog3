@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik:ital,wght@0,300;0,400;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
-/* Base */
+/* Header */
 header {
     font-family: Sigmar, sans-serif;
 
-}
-
-#logosigned{
-    width: 35%;
-    margin: 2% auto auto 5%;
 }
 
 #logo {
@@ -17,6 +13,73 @@ header {
     margin: 2% 0 0 1%;
 
 }
+
+#logosigned {
+    width: 10%;
+    margin: 2% 0 0 1%;
+}
+
+/* If user signed in */
+
+#welcome-text-signed {
+    margin-top: 20px;
+    padding: 0 20%;
+    text-align: center;
+    font-family: 'Permanent Marker', sans-serif;
+    line-height: 300%;
+}
+
+#imgsigned {
+    margin-top: 5%;
+    margin-left: 35%;
+    width: 20%;
+    border: 5px solid #520808;
+    border-radius: 4px;
+}
+
+#welcome-picture {
+    margin-top: 20px;
+    width: 30%;
+    border: 10px solid #520808;
+    border-radius: 4px;
+}
+
+#welcome-text {
+    margin-top: 20px;
+    padding: 0 20%;
+    text-align: center;
+    font-family: 'Permanent Marker', sans-serif;
+    line-height: 300%;
+}
+
+.welcometext {
+    font-family: 'Dancing Script', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 2%;
+    margin-left: 28%;
+    margin-right: 15%;
+    font-size: 150%;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+/* Menu */
+
+#menu {
+    font-size: 50%;
+    float: right;
+    margin-top: 100px;
+    letter-spacing: .1vw;
+    line-height: 50px;
+    text-align: center;
+}
+
+#menu li {
+    float: left;
+    list-style-type: none;
+    margin-right: 55px;
+}
+
+/* Body */
 
 body {
     background-color: rgb(250, 250, 241);
@@ -36,12 +99,26 @@ a {
     text-align: center;
 }
 
+#menu li {
+    float: left;
+    list-style-type: none;
+    margin-right: 55px;
+}
+
 .connect {
     font-family: Sigmar, sans-serif;
     line-height: 30px;
 }
 
-/* forms */
+.mainhead {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
+}
+/* Forms */
 
 .signup-form {
     font-family: 'Permanent Marker', sans-serif;
@@ -74,8 +151,14 @@ a {
     margin-bottom: 4rem;
 }
 
+#sign-up-word {
+    font-size: 50%;
+    margin: 5%;
+}
+
 #out {
     text-align: center;
+    margin-top: 15%;
 }
 
 
@@ -90,7 +173,7 @@ p {
 .input-text {
     background-color: rgb(250, 250, 250);
     background: transparent;
-    width: 18vw;
+    width: 30%;
     height: 25px;
     border: 1px solid #520808;
     border-radius: 2px;
@@ -98,7 +181,7 @@ p {
 
 .feedback {
     height: 20vh;
-    width: 30vw;
+    width: 70%;
     margin-bottom: 2rem;
 }
 
@@ -119,19 +202,7 @@ p {
     font-size: 150%;
 }
 
-
-#welcome-picture {
-    width: 80%;
-    border: 10px solid #520808;
-    border-radius: 4px;
-}
-
-#welcome-text {
-    padding-top: 5%;
-    text-align: center;
-    font-family: 'Permanent Marker', sans-serif;
-    line-height: 300%;
-}
+/* Footer */
 
 #insta {
     font-family: Rubik, sans-serif;
@@ -144,9 +215,51 @@ p {
     padding-left: 1%;
 }
 
-.welcometext {
-    margin-top: 5%;
-    margin-left: -5%;
-    font-size: 200%;
-    letter-spacing: 0.1em;
+#blogs {
+    margin-top: 150px;
+}
+
+/* Media */
+
+@media screen and (max-width: 950px) {
+
+    #menu {
+        font-size: 70%;
+        margin-top: 10px;
+    }
+
+    #welcome-text {
+        line-height: 150%;
+        font-size: 100%;
+    }
+
+    .col-sm {
+        line-height: 120%;
+    }
+
+    #insta {
+        font-size: 50%;
+        margin-left: 55%;
+    }
+    
+    #icon-insta {
+        font-size: 120%;
+        padding-left: 1%;
+    }
+
+    .input-text {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #welcome-text {
+        padding: 0 10%;
+        line-height: 120%;
+        font-size: 70%;
+    }
+
+    .input-text {
+        width: 70%;
+    }      
 }

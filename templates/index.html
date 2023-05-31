@@ -2,19 +2,24 @@
 {% load static %}
 {% block content %}
 
-    <section>
-        {% load static %}
-        <div class="container">
-            <div class="row">
-              <div class="col">
-               <img src="{% static 'images/welcome.jpg' %}" alt="profile picture"
-                   id="welcome-picture">
-                </div>
-                <div class="col" id="welcome-text">Welcome to my food blog. I'm Victoria and I love to cook. Feel free
-                to check out my recipes, join the blog and leave a comment. Thank you! 
-               </div>
-            </div>
-        </div>
-    </section>
+<section>
+    {% load static %}
+    {% load static %}
+    {% if user.is_authenticated %}
+    <div>
+        <img src="{% static 'images/welcome.jpg' %}" alt="profile picture" id="imgsigned">
+    </div>
+    <div id="welcome-text-signed">Welcome to my food blog. I'm Victoria and I love to cook. Feel
+        free to check out my recipes, join the blog and leave a comment. Thank you!
+    </div>
 
-{% endblock %}
+    {% else %}
+    <div class="col-sm text-center">
+        <img src="{% static 'images/welcome.jpg' %}" alt="profile picture" id="welcome-picture">
+    </div>
+    <div class="col-sm text-center" id="welcome-text">Welcome to my food blog. I'm Victoria and I love to cook. Feel
+        free to check out my recipes, join the blog and leave a comment. Thank you!
+    </div>
+    {% endif %}
+
+    {% endblock %}
