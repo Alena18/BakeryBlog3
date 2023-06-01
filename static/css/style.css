@@ -279,6 +279,7 @@ p {
 @media screen and (max-width: 765px) {
 .mainhead {
     height: 20vh;
+    padding-top: 15px;
 }
 }
 
