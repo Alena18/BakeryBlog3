@@ -98,6 +98,7 @@ a {
     letter-spacing: .1vw;
     line-height: 150px;
     text-align: center;
+    margin-bottom: 5%;
 }
 
 #menu li {
@@ -133,6 +134,10 @@ a {
     text-align: center;
     line-height: 120px;
     margin-top: 15%;
+}
+
+#signup_form{
+    margin-top: -25%;
 }
 
 .form {
@@ -228,8 +233,8 @@ p {
 
     #menu {
         font-size: 70%;
-        margin-top: 0;
-        line-height: 120%;
+        margin-top: 100px;
+        line-height: 200%;
     }
 
     #welcome-text {
@@ -253,6 +258,15 @@ p {
 
     .input-text {
         width: 50%;
+    }
+}
+
+@media screen and (max-width: 895px) {
+
+    #menu {
+     
+        margin-top: 0;
+    
     }
 }
 
