@@ -55,8 +55,6 @@
                             <!-- The number of likes goes before the closing strong tag -->
                             <span class="text-secondary">{{ blog.number_of_hearts }} </span>
                         </strong>
-                    </div>
-                    <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
                             <!-- Our total_comments variable goes before the closing strong tag -->
@@ -84,7 +82,7 @@
                             {{ comment.created_on }}
                         </span> wrote:
                     </p>
-    
+
                     {{ comment.body | linebreaks }}
                     {% if user.is_authenticated and user == comment.author %}
                     <form method="POST" action="{% url 'delete_comment' comment.id %}">
@@ -97,28 +95,28 @@
             </div>
         </div>
     </div>
-        <div class="col-md-8 card mb-4  mt-3 ">
-            <div class="card-body">
-                <!-- For later -->
-                {% if commented %}
-                <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
-                </div>
-                {% else %}
-                {% if user.is_authenticated %}
-
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-                </form>
-                {% endif %}
-                {% endif %}
+    <div class="col-md-8 card mb-4  mt-3 ">
+        <div class="card-body">
+            <!-- For later -->
+            {% if commented %}
+            <div class="alert alert-success" role="alert">
+                Your comment is awaiting approval
             </div>
+            {% else %}
+            {% if user.is_authenticated %}
+
+            <h3>Leave a comment:</h3>
+            <p>Posting as: {{ user.username }}</p>
+            <form method="post" style="margin-top: 1.3em;">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+            </form>
+            {% endif %}
+            {% endif %}
         </div>
     </div>
+</div>
 
 </div>
 {% endblock %}

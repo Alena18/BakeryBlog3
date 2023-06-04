@@ -166,6 +166,9 @@ a {
     margin-top: 15%;
 }
 
+label {
+    display: block;
+}
 
 #terms {
     margin-bottom: 2rem;
