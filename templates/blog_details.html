@@ -84,7 +84,7 @@
                     </p>
 
                     {{ comment.body | linebreaks }}
-                    {% if user.is_authenticated %}
+                    {% if user.is_authenticated and user == comments.name %}
                     <form method="POST" action="{% url 'delete_comment' comment.id %}">
                         {% csrf_token %}
                         <button type="submit" class="btn btn-danger">Delete</button>
