@@ -54,6 +54,10 @@ class UserComment(models.Model):
         return f"Comment {self.body} by {self.name}"
 
 class Tips(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Tips"
+
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     updated_on = models.DateTimeField(auto_now=True)
@@ -72,6 +76,10 @@ class Tips(models.Model):
         return self.title
 
 class TipComments(models.Model):
+    
+    class Meta:
+        verbose_name_plural = "Tips"
+        
     post = models.ForeignKey(Tips, on_delete=models.CASCADE,
                              related_name="tcomments")
     name = models.CharField(max_length=80)
