@@ -78,7 +78,7 @@ class Tips(models.Model):
 class TipComments(models.Model):
     
     class Meta:
-        verbose_name_plural = "Tips"
+        verbose_name_plural = "TipComments"
         
     post = models.ForeignKey(Tips, on_delete=models.CASCADE,
                              related_name="tcomments")
