@@ -27,11 +27,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY", "")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", False)
+DEBUG = os.environ.get("DEBUG", True)
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['localhost',
-   '8000-alena18-bakeryblog3-tcatq4mqni.us2.codeanyapp.com','victoria-bakery.herokuapp.com',
+   '8000-alena18-bakeryblog3-h4z8r5zvwr.us2.codeanyapp.com','victoria-bakery.herokuapp.com',
 ]
 
 

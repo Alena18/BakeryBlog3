@@ -1,82 +1,73 @@
 # VICTORIABAKERYBLOG
 
+The live link can be found [here](https://victoria-bakery.herokuapp.com/)
+
 ## UX
 
-During UX designing process of the project were conducted interview and then created personas, paper and digital wireframes, low-fidelity prototype  and mock ups  of the project. For more details please see pdf file.
+During UX designing process of the project were conducted interview and then created personas, paper and digital wireframes, low-fidelity prototype  and mock ups  of the project. For more detailed process please see pdf file.
+
+[embed]https://drive.google.com/file/d/1xccCysB1zefJSmA6NpKRAZJxLUwKfMER/view?usp=sharing[/embed]
+
+Personas
+
+[persona1](documents/personaD.png)
+
+[persona2](documents/personaL.png)
+
+Journey Map
+
+[persona1](documents/journeymapd.png)
+
+[persona2](documents/journeymapl.png)
+
+## Wireframes
+
+Paper wireframe
+
+[paperwireframe](documents/paperwiref.png)
+[paperwireframe](documents/paperwirefr.png)
+[paperwireframe](documents/paperwirefram.png)
+[paperwireframe](documents/wireframe.png)
+
+Low-fidelity prototype before interview
+
+[low-fidelity prototype](documents/low_fidelity_before.png)
+
+Low-fidelity prototype after interview
+
+[low-fidelity prototype](documents/low_fidelity_after.png)
+
 
 ### Colour Scheme
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+Colors scheme was selected according to the logo and was used for highlights text. Background page color was selected to make text standing but not too bright. Colors were tested for colorblind and contast ratio were checked. 
 
-Explain your colours and the colour scheme.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+[colorblind](documents/colorblind.png)
+[contrast ratio](documents/contrast_ratio.png)
 
 - `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
-
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
-
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
-
-![screenshot](documentation/coolors.png)
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
-
-```css
-:root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
-}
-```
+- `#520808` used for primary highlights, logo text.
+- `#212529` used for comments, highlights the author name.
+- `33;37;41;0.75` used for comments, highlights the date.
+- `250;250;241` used for background.
 
 ### Typography
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+Next google fonts were used.
 
-Explain any fonts and icon libraries used, like Google Fonts and/or Font Awesome.
+- [Permanent Marker](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
 
-Consider adding a link to each font used, and the Font Awesome site if used (or similar icon library).
+- [Rubik](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
 
-Example:
+- [Sigmar](https://fonts.google.com/specimen/Montserrat) was used for navigation menu.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
+- [Dancing Script](https://fonts.google.com/specimen/Lato) was used for sign in text.
 
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
 
 ## User Stories
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section, list all of your user stories for the project.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+Next user stories were planned
 
 ### New Site Users
 
@@ -101,49 +92,6 @@ In this section, list all of your user stories for the project.
 - As a site administrator, I should be able to ____________, so that I can ____________.
 - As a site administrator, I should be able to ____________, so that I can ____________.
 - As a site administrator, I should be able to ____________, so that I can ____________.
-
-## Wireframes
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section, display your wireframe screenshots using a Markdown `table`.
-
-Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
-I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
-
-### Home Page Wireframes
-
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-home.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-home.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-home.png) |
-
-### About Page Wireframes
-
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-about.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-about.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-about.png) |
-
-### Contact Page Wireframes
-
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-contact.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-contact.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-contact.png) |
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Repeat for any addition wireframe pages you have.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ## Features
 
