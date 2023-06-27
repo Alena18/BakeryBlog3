@@ -6,7 +6,7 @@ The live link can be found [here](https://victoria-bakery.herokuapp.com/)
 
 During UX designing process of the project were conducted interview and then created personas, paper and digital wireframes, low-fidelity prototype  and mock ups  of the project. For more detailed process please see pdf file.
 
-[embed]https://drive.google.com/file/d/1xccCysB1zefJSmA6NpKRAZJxLUwKfMER/view?usp=sharing[/embed]
+[UX research](https://drive.google.com/file/d/1xccCysB1zefJSmA6NpKRAZJxLUwKfMER/view?usp=sharing)
 
 Personas
 
@@ -71,27 +71,27 @@ Next user stories were planned
 
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to read a blog, so that I can see recipes.
+- As a new site user, I would like to leave comments, so that I can participate in the blog.
+- As a new site user, I would like to delete comments, so that I can manage my comments.
+- As a new site user, I would like to rate a blog, so that I can pick up what's the best to cook.
+- As a new site user, I would like to see a read time, so that I can pick up the quickest recipe.
 
 ### Returning Site Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a returning site user, I would like to contact an admin, so that I can stay in contact.
+- As a returning site user, I would like to read a new blog, so that I can see new recipes.
+- As a returning site user, I would like to read comments, so that I can see if recipe is good.
+- As a returning site user, I would like to log in, so that I can stay in.
+- As a returning site user, I would like to like/unlike, so that I can manage my vote.
 
 ### Site Admin
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As a site administrator, I should be able to delete comment, so that I can manage a blog.
+- As a site administrator, I should be able to read a post, so that I can manage a post content.
+- As a site administrator, I should be able to update a post, so that I  can manage a post content.
+- As a site administrator, I should be able to create a post, so that I can manage a post content.
+- As a site administrator, I should be able to answer questions, so that I can stay in touch with the user.
 
 ## Features
 
