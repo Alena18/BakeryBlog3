@@ -15,9 +15,9 @@
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in blog.featured_image.url %}
                 <img src="https://res.cloudinary.com/dmie5ezad/image/upload/v1684103082/static/images/logo.f3c1c788a906.png"
-                    width="100%">
+                    width="100%" alt="recipe image">
                 {% else %}
-                <img src="{{ blog.featured_image.url }}" width="100%">
+                <img src="{{ blog.featured_image.url }}" width="100%" alt="recipe image">
                 {% endif %}
             </div>
         </div>

@@ -16,9 +16,10 @@
                             <div class="image-container">
                                 {% if "placeholder" in blog.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dmie5ezad/image/upload/v1684103082/static/images/logo.f3c1c788a906.png">
+                                    src="https://res.cloudinary.com/dmie5ezad/image/upload/v1684103082/static/images/logo.f3c1c788a906.png"
+                                    alt="recipe image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ blog.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ blog.featured_image.url }}" alt="recipe image">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ blog.author }}</p>
