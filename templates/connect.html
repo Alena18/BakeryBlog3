@@ -2,34 +2,34 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-        <!-- sign up form -->
-        <section class="form">
-            <form action="https://formsubmit.co/58b9af38245f1e282b0f65a22bf43856" method="POST" class="form">
-                <h1>Look forward to getting in touch with you</h1>
-    
-                <label for="fname">First Name</label>
-                <br>
-                <input id="fname" name="first_name" type="text" class="input-text" required>
-                <br>
-                <br>
-                <label for="lname">Last Name</label>
-                <br>
-                <input id="lname" name="last_name" type="text" class="input-text">
-                <br>
-                <br>
-                <label for="email">Email Address</label>
-                <br>
-                <input type="email" id="email" name="email_address" class="input-text" required>
-                <br>
-                <br>
-                <label for="feedback">Message</label>
-                <br>
-                <textarea id="feedback" name="feedback" placeholder="Write your message here"
-                    class="feedback" required></textarea>
-                <br>
-                <input type="hidden" name="_next" value="https://victoria-bakery.herokuapp.com/askconfirm.html">
-                <input class="button-submit" type="submit" value="Get in touch">
-                
-            </form>
-        </section>
+<!-- sign up form -->
+<section class="form">
+    <form action="https://formsubmit.co/58b9af38245f1e282b0f65a22bf43856" method="POST" class="form">
+        <h1>Look forward to getting in touch with you</h1>
+
+        <label for="fname">First Name</label>
+        <br>
+        <input id="fname" name="first_name" type="text" class="input-text" required>
+        <br>
+        <br>
+        <label for="lname">Last Name</label>
+        <br>
+        <input id="lname" name="last_name" type="text" class="input-text">
+        <br>
+        <br>
+        <label for="email">Email Address</label>
+        <br>
+        <input type="email" id="email" name="email_address" class="input-text" required>
+        <br>
+        <br>
+        <label for="feedback">Message</label>
+        <br>
+        <textarea id="feedback" name="feedback" placeholder="Write your message here" class="feedback"
+            required></textarea>
+        <br>
+        <input type="hidden" name="_next" value="https://victoria-bakery.herokuapp.com/askconfirm.html">
+        <input class="button-submit" type="submit" value="Get in touch">
+
+    </form>
+</section>
 {% endblock %}
