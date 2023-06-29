@@ -31,8 +31,9 @@ DEBUG = os.environ.get("DEBUG", False)
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['localhost',
-   '8000-alena18-bakeryblog3-h4z8r5zvwr.us2.codeanyapp.com','victoria-bakery.herokuapp.com',
-]
+                 '8000-alena18-bakeryblog3-h4z8r5zvwr.us2.codeanyapp.com',
+                 'victoria-bakery.herokuapp.com',
+                 ]
 
 
 # Application definition
@@ -118,17 +119,18 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
+        'NAME':
+        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
+     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
+     },
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+     },
 ]
 
 

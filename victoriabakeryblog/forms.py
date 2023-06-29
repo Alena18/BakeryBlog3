@@ -7,6 +7,7 @@ class UserCommentForm(forms.ModelForm):
         model = UserComment
         fields = ('body',)
 
+
 class TipCommentForm(forms.ModelForm):
     class Meta:
         model = TipComments

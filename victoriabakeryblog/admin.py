@@ -6,7 +6,8 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(RecipePost)
 class PostAdmin(SummernoteModelAdmin):
 
-    list_display = ('title', 'slug', 'author', 'status', 'created_on', 'updated_on', 'read_time')
+    list_display = ('title', 'slug', 'author', 'status', 'created_on',
+                    'updated_on', 'read_time')
     search_fields = ['title', 'content']
     list_filter = ('status', 'created_on')
     prepopulated_fields = {'slug': ('title',)}
@@ -22,6 +23,7 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comment(self, request, queryset):
         queryset.update(approved=True)
+
 
 @admin.register(Tips)
 class TipPostAdmin(SummernoteModelAdmin):

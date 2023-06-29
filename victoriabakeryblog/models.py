@@ -3,7 +3,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-STATUS = ((0,"Draft"), (1, "Published"))
+STATUS = ((0, "Draft"), (1, "Published"))
+
 
 class RecipePost(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -17,16 +18,15 @@ class RecipePost(models.Model):
     )
     featured_image = CloudinaryField('image', default='placeholder')
     read_time = models.IntegerField(default=0)
-    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)    
+    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     hearts = models.ManyToManyField(
         User, related_name='blogpost_hearts', blank=True)
 
-
     def read_time(self):
-      result = readtime.of_text(self.content)
-      return result.text
-    
+        result = readtime.of_text(self.content)
+        return result.text
+
     def number_of_hearts(self):
         return self.hearts.count()
 
@@ -45,13 +45,14 @@ class UserComment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
     author = models.ForeignKey(User, on_delete=models.CASCADE,
-            related_name="comments", null=True)
+                               related_name="comments", null=True)
 
     class Meta:
         ordering = ["created_on"]
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
 
 class Tips(models.Model):
 
@@ -75,11 +76,12 @@ class Tips(models.Model):
     def __str__(self):
         return self.title
 
+
 class TipComments(models.Model):
-    
+
     class Meta:
         verbose_name_plural = "TipComments"
-        
+
     post = models.ForeignKey(Tips, on_delete=models.CASCADE,
                              related_name="tcomments")
     name = models.CharField(max_length=80)
@@ -87,7 +89,7 @@ class TipComments(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
     author = models.ForeignKey(User, on_delete=models.CASCADE,
-            related_name="tcomments", null=True)
+                               related_name="tcomments", null=True)
 
     class Meta:
         ordering = ["created_on"]
