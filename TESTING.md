@@ -104,28 +104,23 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## User Story Testing
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Testing user stories is actually quite simple, once you've already got the stories defined on your README.
-
-Most of your project's **features** should already align with the **user stories**,
-so this should as simple as creating a table with the user story, matching with the re-used screenshot
-from the respective feature.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature01.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature02.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature03.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature04.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature05.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature06.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature07.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature08.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature09.png) |
-| repeat for all remaining user stories | x |
+| As a new site user, I would like to read a blog, so that I can see recipes. | ![screenshot](documents/read.png) |
+| As a new site user, I would like to leave comments, so that I can participate in the blog. | ![screenshot](documents/comment.png) |
+| As a new site user, I would like to delete comments, so that I can manage my comments. | ![screenshot](documents/delete.png) |
+| As a new site user, I would like to rate a blog, so that I can pick up what's the best to cook. | ![screenshot](documents/like.png) |
+| As a new site user, I would like to see a read time, so that I can pick up the quickest recipe. | ![screenshot](documents/reading.png) |
+| As a returning site user, I would like to contact an admin, so that I can stay in contact. | ![screenshot](documents/askname.png) |
+| As a returning site user, I would like to read a new blog, so that I can see new recipes. | ![screenshot](documents/new.png) |
+| As a returning site user, I would like to read comments, so that I can see if recipe is good. | ![screenshot](documents/readcomment.png) |
+| As a returning site user, I would like to log in, so that I can stay in. | ![screenshot](documents/signin.png) |
+| As a returning site user, I would like to like/unlike, so that I can manage my vote. | ![screenshot](documents/unlike.png) |
+| As a site administrator, I should be able to delete comment, so that I can manage a blog. | ![screenshot](documentation/feature02.png) |
+| As a site administrator, I should be able to read a post, so that I can manage a post content. | ![screenshot](documents/admin.png) |
+|As a site administrator, I should be able to update a post, so that I  can manage a post content. | ![screenshot](documents/admindel.png) |
+| As a site administrator, I should be able to create a post, so that I can manage a post content. | ![screenshot](documents/add.png) |
+|As a site administrator, I should be able to answer questions, so that I can stay in touch with the user. | ![screenshot](documents/keepintouch.png) |
 
 ## Automated Testing
 
