@@ -13,6 +13,7 @@ cryptography==44.0.1
 deprecation==2.1.0
 dj-database-url==2.3.0
 Django==5.2.1
+django-allauth==65.8.1
 dnspython==2.7.0
 eventlet==0.39.0
 firebase-admin==6.6.0
