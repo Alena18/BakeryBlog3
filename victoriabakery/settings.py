@@ -30,10 +30,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "")
 DEBUG = os.environ.get("DEBUG", False)
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['localhost',
-                 '8000-alena18-bakeryblog3-h4z8r5zvwr.us2.codeanyapp.com',
-                 'victoria-bakery.herokuapp.com',
-                 ]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'bakeryblog3.onrender.com',
+                  ]
 
 
 # Application definition
