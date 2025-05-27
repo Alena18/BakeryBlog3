@@ -121,7 +121,8 @@ a {
 .signup-form {
     font-family: 'Permanent Marker', sans-serif;
     font-size: 200%;
-    margin-top: 350px;
+    margin-top: 7%;
+    
 }
 
 .signup-form h2 {
@@ -130,11 +131,11 @@ a {
     padding-right: 10%;
     text-align: center;
     line-height: 120%;
-    margin-top: 15%;
+    margin-top: 7%;
 }
 
 #signup_form {
-    margin-top: -15%;
+    margin-top: 0;
 }
 
 .form {
@@ -142,18 +143,36 @@ a {
     margin-left: 2%;
     margin-bottom: 3rem;
     font-size: 80%;
-    margin-top: 25%;
+    margin-top: 7%;
+    text-align: center;
+    
 }
 
 .form h1 {
     font-family: 'Permanent Marker', sans-serif;
     font-size: 200%;
     margin-bottom: 2rem;
-    margin-top: 15%;
+    margin-top: 7%;
+    text-align: center;
+}
+
+.row.form {
+    display: flex;
+    justify-content: center;
+}
+
+/* Center the list block but align bullets + text left */
+.signup ul {
+    list-style: disc inside;   /* keeps bullets inside */
+    text-align: left;          /* align text left */
+    margin: 0 auto;            /* center the whole ul block */
+    width: fit-content;        /* shrinkwrap width to content */
+    padding-left: 0;           /* remove extra padding */
 }
 
 .p-form {
     margin-bottom: 4rem;
+    text-align: center;
 }
 
 #sign-up-word {
