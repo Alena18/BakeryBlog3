@@ -1,10 +1,10 @@
 # VICTORIABAKERYBLOG
 
-The live link can be found [here](https://victoria-bakery.herokuapp.com/)
+The live link can be found [here](https://bakeryblog3.onrender.com/)
 
 ## UX
 
-During UX designing process of the project were conducted interview and then created personas, paper and digital wireframes, low-fidelity prototype  and mock ups  of the project. For more detailed process please see pdf file.
+During UX designing process of the project were conducted interview and then created personas, paper and digital wireframes, low-fidelity prototype and mock ups of the project. For more detailed process please see pdf file.
 
 [UX research](https://drive.google.com/file/d/1xccCysB1zefJSmA6NpKRAZJxLUwKfMER/view?usp=sharing)
 
@@ -37,10 +37,9 @@ Low-fidelity prototype after interview
 
 [low-fidelity prototype](documents/low_fidelity_after.png)
 
-
 ### Colour Scheme
 
-Colors scheme was selected according to the logo and was used for highlights text. Background page color was selected to make text standing but not too bright. Colors were tested for colorblind and contast ratio were checked. 
+Colors scheme was selected according to the logo and was used for highlights text. Background page color was selected to make text standing but not too bright. Colors were tested for colorblind and contast ratio were checked.
 
 [colorblind](documents/colorblind.png)
 [contrast ratio](documents/contrast_ratio.png)
@@ -89,7 +88,7 @@ Next user stories were planned
 
 - As a site administrator, I should be able to delete comment, so that I can manage a blog.
 - As a site administrator, I should be able to read a post, so that I can manage a post content.
-- As a site administrator, I should be able to update a post, so that I  can manage a post content.
+- As a site administrator, I should be able to update a post, so that I can manage a post content.
 - As a site administrator, I should be able to create a post, so that I can manage a post content.
 - As a site administrator, I should be able to answer questions, so that I can stay in touch with the user.
 
@@ -99,31 +98,31 @@ Next user stories were planned
 
 - **Sign in**
 
-    - Sign in feature was implemented for user so they can stay in touch and leave comments. 
+  - Sign in feature was implemented for user so they can stay in touch and leave comments.
 
 ![screenshot](documents/signin.png)
 
 - **Log in/out**
 
-    - After sign in user can log in and log out.
+  - After sign in user can log in and log out.
 
 ![screenshot](documents/logout.png)
 
 - **Leave a comment**
 
-    - User can leave a comment
+  - User can leave a comment
 
 ![screenshot](documents/comment.png)
 
 - **Delete a comment**
 
-    - User can delete comments
+  - User can delete comments
 
 ![screenshot](documents/delete.png)
 
 - **Ask questions**
 
-    - User can ask questions and stay in touch.
+  - User can ask questions and stay in touch.
 
 ![screenshot](documents/getintouch.png)
 
@@ -175,7 +174,7 @@ class RecipePost(models.Model):
     )
     featured_image = CloudinaryField('image', default='placeholder')
     read_time = models.IntegerField(default=0)
-    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)    
+    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     hearts = models.ManyToManyField(
         User, related_name='blogpost_hearts', blank=True)
@@ -183,20 +182,20 @@ class RecipePost(models.Model):
 
 - Table: **RecipePost**
 
-    | **PK** | **id** (unique) | Type | Notes |
-    | --- | --- | --- | --- |
-    | **FK** | author | ForeignKey | FK to **author** |
-    | | title | CharField | |
-    | | slug | SlugField | |
-    | | updated_on | DateTimeField | |
-    | | created_on | DateTimeField | |
-    | | ingredients | TextField | |
-    | | content | TextField | |
-    | | featured_image  | CloudinaryField | |
-    | | read_time | IntegerField | |
-    | | timestamp | DateTimeField | |
-    | | status | IntegerField | |
-    | | hearts | ManyToManyField | |
+  | **PK** | **id** (unique) | Type            | Notes            |
+  | ------ | --------------- | --------------- | ---------------- |
+  | **FK** | author          | ForeignKey      | FK to **author** |
+  |        | title           | CharField       |                  |
+  |        | slug            | SlugField       |                  |
+  |        | updated_on      | DateTimeField   |                  |
+  |        | created_on      | DateTimeField   |                  |
+  |        | ingredients     | TextField       |                  |
+  |        | content         | TextField       |                  |
+  |        | featured_image  | CloudinaryField |                  |
+  |        | read_time       | IntegerField    |                  |
+  |        | timestamp       | DateTimeField   |                  |
+  |        | status          | IntegerField    |                  |
+  |        | hearts          | ManyToManyField |                  |
 
 ## Agile Development Process
 
@@ -216,20 +215,20 @@ There, I used my own **User Story Template** to manage user stories.
 
 - [Open Issues](https://github.com/Alena18/BakeryBlog3/issues)
 
-    ![screenshot](documents/project.png.png)
+  ![screenshot](documents/project.png.png)
 
 - [Closed Issues](https://github.com/Alena18/BakeryBlog3/issues?q=is%3Aissue+is%3Aclosed)
 
-    ![screenshot](documents/closed.png)
+  ![screenshot](documents/closed.png)
 
 ### MoSCoW Prioritization
 
 I've decomposed my Epics into stories prior to prioritizing and implementing them.
 Using this approach, I was able to apply the MoSCow prioritization and labels to my user stories within the Issues tab.
 
-- **Must Have**: guaranteed to be delivered (*max 60% of stories*)
-- **Should Have**: adds significant value, but not vital (*the rest ~20% of stories*)
-- **Could Have**: has small impact if left out (*20% of stories*)
+- **Must Have**: guaranteed to be delivered (_max 60% of stories_)
+- **Should Have**: adds significant value, but not vital (_the rest ~20% of stories_)
+- **Could Have**: has small impact if left out (_20% of stories_)
 - **Won't Have**: not a priority for this iteration
 
 ## Testing
@@ -245,6 +244,7 @@ The live deployed application can be found deployed on [Heroku](https://victoria
 This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL Database.
 
 To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
+
 - Click **Create New Instance** to start a new database.
 - Provide a name (this is commonly the name of the project: BakeryBlog3).
 - Select the **Tiny Turtle (Free)** plan.
@@ -257,8 +257,9 @@ To obtain your own Postgres Database, sign-up with your GitHub account, then fol
 This project uses the [Cloudinary API](https://cloudinary.com) to store media assets online, due to the fact that Heroku doesn't persist this type of data.
 
 To obtain your own Cloudinary API key, create an account and log in.
-- For *Primary interest*, you can choose *Programmable Media for image and video API*.
-- Optional: *edit your assigned cloud name to something more memorable*.
+
+- For _Primary interest_, you can choose _Programmable Media for image and video API_.
+- Optional: _edit your assigned cloud name to something more memorable_.
 - On your Cloudinary Dashboard, you can copy your **API Environment Variable**.
 - Be sure to remove the `CLOUDINARY_URL=` as part of the API **value**; this is the **key**.
 
@@ -272,37 +273,43 @@ Deployment steps are as follows, after account setup:
 - Your app name must be unique, and then choose a region closest to you (EU or USA), and finally, select **Create App**.
 - From the new app **Settings**, click **Reveal Config Vars**, and set your environment variables.
 
-| Key | Value |
-| --- | --- |
-| `CLOUDINARY_URL` | user's own value |
-| `DATABASE_URL` | user's own value |
-| `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
-| `SECRET_KEY` | user's own value |
+| Key                     | Value                                                                |
+| ----------------------- | -------------------------------------------------------------------- |
+| `CLOUDINARY_URL`        | user's own value                                                     |
+| `DATABASE_URL`          | user's own value                                                     |
+| `DISABLE_COLLECTSTATIC` | 1 (_this is temporary, and can be removed for the final deployment_) |
+| `SECRET_KEY`            | user's own value                                                     |
 
 Heroku needs two additional files in order to deploy properly.
+
 - requirements.txt
 - Procfile
 
 You can install this project's **requirements** (where applicable) using:
+
 - `pip3 install -r requirements.txt`
 
 If you have your own packages that have been installed, then the requirements file needs updated using:
+
 - `pip3 freeze --local > requirements.txt`
 
 The **Procfile** can be created with the following command:
+
 - `echo web: gunicorn app_name.wsgi > Procfile`
-- *replace **app_name** with the name of your primary Django app name; the folder where settings.py is located*
+- _replace **app_name** with the name of your primary Django app name; the folder where settings.py is located_
 
 For Heroku deployment, follow these steps to connect your own GitHub repository to the newly created app:
 
 Either:
+
 - Select **Automatic Deployment** from the Heroku app.
 
 Or:
+
 - In the Terminal/CLI, connect to Heroku using this command: `heroku login -i`
-- Set the remote for Heroku: `heroku git:remote -a app_name` (replace *app_name* with your app name)
+- Set the remote for Heroku: `heroku git:remote -a app_name` (replace _app_name_ with your app name)
 - After performing the standard Git `add`, `commit`, and `push` to GitHub, you can now type:
-	- `git push heroku main`
+  - `git push heroku main`
 
 The project should now be connected and deployed to Heroku!
 
@@ -310,7 +317,8 @@ The project should now be connected and deployed to Heroku!
 
 This project can be cloned or forked in order to make a local copy on your own system.
 
-For either method, you will need to install any applicable packages found within the *requirements.txt* file.
+For either method, you will need to install any applicable packages found within the _requirements.txt_ file.
+
 - `pip3 install -r requirements.txt`.
 
 You will need to create a new file called `env.py` at the root-level,
@@ -330,6 +338,7 @@ os.environ.setdefault("DEBUG", "True")
 ```
 
 Once the project is cloned or forked, in order to run it locally, you'll need to follow these steps:
+
 - Start the Django app: `python3 manage.py runserver`
 - Stop the app once it's loaded: `CTRL+C` or `⌘+C` (Mac)
 - Make any necessary migrations: `python3 manage.py makemigrations`
@@ -342,13 +351,13 @@ Once the project is cloned or forked, in order to run it locally, you'll need to
 
 You can clone the repository by following these steps:
 
-1. Go to the [GitHub repository](https://github.com/Alena18/BakeryBlog3) 
-2. Locate the Code button above the list of files and click it 
+1. Go to the [GitHub repository](https://github.com/Alena18/BakeryBlog3)
+2. Locate the Code button above the list of files and click it
 3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
 4. Open Git Bash or Terminal
 5. Change the current working directory to the one where you want the cloned directory
 6. In your IDE Terminal, type the following command to clone my repository:
-	- `git clone https://github.com/Alena18/BakeryBlog3.git`
+   - `git clone https://github.com/Alena18/BakeryBlog3.git`
 7. Press Enter to create your local clone.
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
@@ -371,17 +380,16 @@ You can fork this repository by using the following steps:
 
 During the project next additional media were used:
 
-| Source | Location | Notes |
-| --- | --- | --- |
-| [Markdown Builder](https://traveltimn.github.io/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
-| [ChatGPT](https://openai.com/blog/chatgpt) | django | "How to Use Django" |
-| [StackOverflow](https://stackoverflow.com/questions/448919/how-can-i-remove-a-commit-on-github) | Remove commits | How to remove last commit in github |
-| [YouTube](https://www.youtube.com/watch?v=8NPOwmtupiI&t=473s) | Delete comments | Delete comments Django Python |
-| [YouTube](https://www.youtube.com/watch?v=vIv1c6RLBac) | PP4 | tutorial for the beginning of the project |
+| Source                                                                                          | Location           | Notes                                     |
+| ----------------------------------------------------------------------------------------------- | ------------------ | ----------------------------------------- |
+| [Markdown Builder](https://traveltimn.github.io/markdown-builder)                               | README and TESTING | tool to help generate the Markdown files  |
+| [ChatGPT](https://openai.com/blog/chatgpt)                                                      | django             | "How to Use Django"                       |
+| [StackOverflow](https://stackoverflow.com/questions/448919/how-can-i-remove-a-commit-on-github) | Remove commits     | How to remove last commit in github       |
+| [YouTube](https://www.youtube.com/watch?v=8NPOwmtupiI&t=473s)                                   | Delete comments    | Delete comments Django Python             |
+| [YouTube](https://www.youtube.com/watch?v=vIv1c6RLBac)                                          | PP4                | tutorial for the beginning of the project |
 
 ### Acknowledgements
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his huge support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-
