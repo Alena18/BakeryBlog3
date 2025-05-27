@@ -156,10 +156,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-if DEBUG:
-    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
-else:
-    STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
