@@ -1,1 +1,1 @@
-web: gunicorn victoriabakery.wsgi
+web: gunicorn victoriabakery.wsgi --bind 0.0.0.0:$PORT
