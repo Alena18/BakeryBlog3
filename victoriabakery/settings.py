@@ -160,7 +160,7 @@ STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 CLOUDINARY_STORAGE = {
     'STATIC': True,
-    'VERSIONED': True, 
+    'VERSIONED': True,  # <--- make sure this is enabled
 }
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
